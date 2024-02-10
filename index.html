@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="flex justify-center align-center items-center h-screen">
+        <div role="tablist" class="tabs tabs-lifted tabs-lg">
+            <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Register" checked />
+            <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                <div class="mb-4">
+                    <label for="name" class="label label-text">Name</label>
+                    <input id="name" type="text" placeholder="Type here" class="input input-bordered w-full max-w-md" />
+                </div>
+                <div class="mb-4">
+                    <label for="age" class="label label-text">Age</label>
+                    <input id="age" type="number" placeholder="Type here"
+                        class="input input-bordered w-full max-w-md" />
+                </div>
+                <div class="mb-4">
+                    <label for="pocket" class="label label-text">Pocket Money</label>
+                    <input id="pocket" type="number" placeholder="Type here"
+                        class="input input-bordered w-full max-w-md" />
+                </div>
+                <button id="addButton" type="submit" class="btn btn-success">Add</button>
+            </div>
+
+            <input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="List" />
+            <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                <div class="overflow-x-auto">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Pocket Money</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                        </tbody>
+                    </table>
+                    <div class="flex justify-center mt-8">
+                        <div class="stats shadow">
+                            <div class="stat place-items-center">
+                                <div class="stat-title">Age Average</div>
+                                <div id="ageAverage" class="stat-value">0</div>
+                            </div>
+                            <div class="stat place-items-center">
+                                <div class="stat-title">Pocket Money Average</div>
+                                <div id="pocketAverage" class="stat-value">0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
